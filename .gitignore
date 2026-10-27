@@ -1,0 +1,18 @@
+# rendered output
+*.pdf
+!templates/*.pdf
+
+# local config and personal material
+.env
+*.local
+cv.html
+!templates/cv.html
+
+# python
+__pycache__/
+*.pyc
+
+# editors
+.DS_Store
+.idea/
+.vscode/

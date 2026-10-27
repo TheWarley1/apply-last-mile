@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>YOUR NAME | CV</title>
+<!--
+  One-page CV scaffold. Replace every PLACEHOLDER. Then prove it:
+
+    python3 scripts/render_cv.py templates/cv.html /tmp/cv.pdf \
+        --expect-text "Education" --expect-phone "+000000000000"
+
+  Rules this layout encodes:
+    * one page, always. Tighten spacing and font size, merge bullets, never overflow to page two.
+    * experience in reverse chronological order, never ordered by relevance.
+    * no em dashes anywhere. The render script fails on them.
+    * every project line names something a reader can open.
+-->
+<style>
+  @page { size: A4; margin: 11mm 12mm; }
+  body { font-family: "DejaVu Sans", "Segoe UI", sans-serif; font-size: 8.3pt; color: #1a1a1a; line-height: 1.22; }
+  h1 { font-size: 15.5pt; margin: 0 0 2pt 0; letter-spacing: 0.5pt; }
+  .contact { font-size: 8.2pt; color: #444; margin-bottom: 5pt; }
+  .contact a { color: #1a56a0; text-decoration: none; }
+  h2 { font-size: 9.4pt; text-transform: uppercase; letter-spacing: 1pt; border-bottom: 1.1pt solid #1a1a1a; padding-bottom: 1.2pt; margin: 4.2pt 0 2.6pt 0; }
+  .job { margin-bottom: 3pt; }
+  .job .row { display: flex; justify-content: space-between; }
+  .job .title { font-weight: bold; }
+  .job .dates { color: #444; white-space: nowrap; }
+  .job .org { font-style: italic; color: #333; }
+  ul { margin: 1.6pt 0 0 0; padding-left: 10pt; }
+  li { margin-bottom: 0.9pt; }
+  .skills-cols { display: flex; gap: 10pt; }
+  .skills-cols div { flex: 1; }
+  .skills-cols strong { display: block; margin-bottom: 1pt; }
+  p { margin: 2pt 0; }
+</style>
+</head>
+<body>
+
+<h1>YOUR NAME</h1>
+<div class="contact">
+  City, Country &nbsp;|&nbsp; your.email@example.com &nbsp;|&nbsp; +000 000 0000 &nbsp;|&nbsp;
+  <a href="https://github.com/yourhandle">github.com/yourhandle</a> &nbsp;|&nbsp;
+  <a href="https://your.site">your.site</a>
+</div>
+
+<h2>Summary</h2>
+<p>Two sentences. What you build or run, the single strongest proof of it, and the kind of team you
+work with. No adjectives that a reader cannot check.</p>
+
+<h2>Core Skills</h2>
+<div class="skills-cols">
+  <div>
+    <strong>Domain</strong>
+    Skill &middot; Skill &middot; Skill &middot; Skill
+  </div>
+  <div>
+    <strong>Technical</strong>
+    Tool &middot; Tool &middot; Tool &middot; Tool
+  </div>
+  <div>
+    <strong>Other</strong>
+    Certificate or language &middot; Method &middot; Method
+  </div>
+</div>
+
+<h2>Experience</h2>
+
+<div class="job">
+  <div class="row"><span class="title">Most Recent Role</span><span class="dates">2025 &ndash; Present</span></div>
+  <div class="org">Employer &middot; Location or Remote</div>
+  <ul>
+    <li>What you did, with one real number attached (volume, count, time saved, size).</li>
+    <li>A second bullet only if it says something the first one does not.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="row"><span class="title">Previous Role</span><span class="dates">2023 &ndash; 2025</span></div>
+  <div class="org">Employer &middot; Location</div>
+  <ul>
+    <li>Concrete outcome. Never "supported day to day operations" with nothing else attached.</li>
+  </ul>
+</div>
+
+<h2>Projects</h2>
+<ul>
+  <li><strong>Project name</strong>: what it does, one line, plus the live link. A shipped thing with a URL outranks any description of a skill.</li>
+  <li><strong>Second project (in progress)</strong>: mark in-progress work as in progress, in every document it appears in.</li>
+</ul>
+
+<h2>Education</h2>
+<p><strong>Degree, Subject</strong> | Institution, Year Range | Grade if it helps you</p>
+
+<h2>Certifications</h2>
+<ul>
+  <li>Certification | Issuer (year)</li>
+</ul>
+
+<h2>Languages</h2>
+<p>Language (level)</p>
+
+</body>
+</html>
